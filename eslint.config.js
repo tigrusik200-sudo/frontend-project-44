@@ -1,19 +1,19 @@
-import stylisticJs from '@stylistic/eslint-plugin-js';
+import stylistic from '@stylistic/eslint-plugin';
 
 export default [
   {
     files: ['**/*.js'],
     plugins: {
-      '@stylistic/js': stylisticJs,
+      '@stylistic': stylistic,
     },
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
     },
     rules: {
-      '@stylistic/js/indent': ['error', 2],
-      '@stylistic/js/quotes': ['error', 'single'],
-      '@stylistic/js/semi': ['error', 'always'],
+      '@stylistic/indent': ['error', 2],
+      '@stylistic/quotes': ['error', 'single'],
+      '@stylistic/semi': ['error', 'always'],
       'no-console': 'off', // Разрешаем console.log для консольных игр
     },
   },
