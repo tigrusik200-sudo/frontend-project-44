@@ -1,20 +1,20 @@
-import stylistic from '@stylistic/eslint-plugin';
+import stylistic from '@stylistic/eslint-plugin'
+import globals from 'globals'
 
 export default [
+  stylistic.configs.recommended,
   {
     files: ['**/*.js'],
-    plugins: {
-      '@stylistic': stylistic,
-    },
     languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
+      globals: {
+        ...globals.node,
+        ...globals.browser,
+      },
     },
     rules: {
-      '@stylistic/indent': ['error', 2],
       '@stylistic/quotes': ['error', 'single'],
-      '@stylistic/semi': ['error', 'always'],
-      'no-console': 'off', // Разрешаем console.log для консольных игр
+      '@stylistic/semi': ['error', 'never'],
+      'no-console': 'off', // Разрешаем console.log для консольных игр\
     },
   },
-];
+]
