@@ -18,6 +18,8 @@
 ```bash
 make install
 
+---
+
 #### Форматирование текста
 ```bash
 make prettier
